@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jodie Thomas Cunningham</title>
+
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="resume-contents">
+        <section class="left-section">
+            <div class="left-section-contents">
+                <div class="profile">
+                    <img class="profile-image" src="img/profile-image.jpg" alt="Profile image">
+                    <p class="name">Jodie Thomas Cunningham</p>
+                    <p class="profession">Cloud Solutions Architect</p>
+                </div>
+                <div class="contact-info">
+                    <p class="left-title">Contact Info</p>
+                    <ul>
+                        <li><i class="fa fa-phone"></i>+4054670013
+                        </li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:jodie@jodie.site">jodie@jodie.site</a>
+                        </li>
+                        <li><i class="fa fa-globe"></i><a href="https://jodie.site">jodie.site</a>
+                        </li>
+                        <li><i class="fa fa-github"></i><a href="https://github.com/jodiecunningham">GitHub Repos</a>
+                        </li>
+                        <li><i class="fa fa-map-marker"></i>Yukon, OK
+                        </li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <p class="left-title">Skills</p>
+                    <ul>
+                        <li>
+                            <p>Azure, AWS, and GCP Architecture</p>
+                        </li>
+                        <li>
+                            <p>Bash, Powershell and Python scripting</p>
+                        </li>
+                        <li>
+                            <p>ARM, Ansible and Terraform IaC/CM</p>
+                        </li>
+                        <li>
+                            <p>K6, JMeter and Robot Framework testing</p>
+                        </li>
+                        <li>
+                            <p>Azure AD, M365</p>
+                        </li>
+                        <li>
+                            <p>Azure Virtual Desktop</p>
+                        </li>
+                        <li>
+                            <p>Git, GitHub, Azure DevOps</p>
+                        </li>
+                        <li>
+                            <p>Linux, Docker, ContainerD</p>
+                        </li>
+                        <li>
+                            <p>Windows 2016+</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="visitorcolumn">
+                    <p class="left-title">Hit Counter</p>
+                    <p class="visitorblock"><b id="visitorcount">n/a </b>&nbsp;&nbsp;visitors</p>
+                </div>
+                <script>
+                    async function update_visitor() {
+                        const text = await count_visitor();
+                        document.querySelector('#visitorcount').innerHTML = text;
+                    }
+
+                    async function count_visitor() {
+                        const response = await fetch('/api/countVisitor');
+                        const text = await response.text();
+                        console.log(`ok: ${response.ok}, status: ${response.status}, text: ${text}`);
+                        return text;
+                    }
+
+                    window.onload = update_visitor();
+                </script>
+            </div>
+        </section>
+
+        <section class="right-section">
+            <div class="right-section-contents">
+                <section class="about gap">
+                    <div class="right-title">Highlights</div>
+                    <ul>
+                        <p class="about-me-contents">
+                            <li>• Cloud infrastructure architecture and governance expertise.</li>
+                            <li>• Valued in multi-discipline experience and team building.</li>
+                            <li>• Organization-wide asset in cloud journey for all teams.</li>
+                        </p>
+                    </ul>
+                </section>
+
+                <section class="experience gap">
+                    <div class="right-title">Experience</div>
+                    <div class="experience-contents">
+                        <div class="exp-left">
+                            <p class="exp-company-name">United Data Technologies</p>
+                            <p class="exp-time-period">2021 - Present</p>
+                        </div>
+                        <div class="exp-right">
+                            <p class="exp-position">Enterprise Solutions Architect</p>
+                            <p class="exp-desc">
+                                Lead solutions architect for customer engagements in Azure cloud migration, stepping
+                                through the Cloud Adoption Framework with the customer and ensuring deployed workloads
+                                align with principles in the Azure Well Architected Framework. Providing handoffs and
+                                documentation for all solutions, including design documents and starter “OpsDocs” for
+                                operations teams.
+                            <ul>
+                                <li>
+                                    <p>• Architected and implemented public DNS solution for customer in response to
+                                        outages in on-premises public DNS services.</p>
+                                </li>
+                                <li>
+                                    <p>• Architected and implemented cross-premises private DNS resolution for private
+                                        DNS workloads to support customer use of private endpoints.</p>
+                                </li>
+                                <li>
+                                    <p>• Migrated critical customer IdP workload to Azure with limited cutover time.
+                                        Solution architected included Azure Traffic Manager, Azure Application
+                                        Gateway/WAFv2, ASEv2 App Services and SQL Premium instances deployed to multiple
+                                        environments from IaC pipeline in Azure DevOps. Load tested solution for tens of
+                                        thousands of concurrent connections using scenarios written in K6.</p>
+                                </li>
+                                <li>
+                                    <p>• Created Ansible deployments to publish Azure Site Recovery to ~800 edge
+                                        servers.</p>
+                                </li>
+                                <li>
+                                    <p>• Improved reliability and repeatability of customer deployment process, through
+                                        improved Azure DevOps release pipelines and use of App Service staging slots for
+                                        daytime deployments.</p>
+                                </li>
+                                <li>
+                                    <p>• Deployed additional AVD workload for customer.</p>
+                                </li>
+                                <li>
+                                    <p>• Established Terraform IaC repo and pipelines for customer and used Terraformer
+                                        and Aztfy to reverse engineer existing environment.</p>
+                                </li>
+                                <li>
+                                    <p>• Architected solution for customer migration of critical line of business app
+                                        from .NET Framework edge environment to centralized, containerized deployment
+                                        with Azure Front Door Premium, Azure App Service Environment v3 with Windows
+                                        Containers, Azure Container Instances and SQL Managed Instances.</p>
+                                </li>
+                                <li>
+                                    <p>• Architected solution to containerize Delphi Windows workload.</p>
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="experience-contents">
+                        <div class="exp-left">
+                            <p class="exp-company-name">Oklahoma OMES ISD</p>
+                            <p class="exp-time-period">2020-2021</p>
+                        </div>
+                        <div class="exp-right">
+                            <p class="exp-position">Cloud Engineer</p>
+                            <p class="exp-desc">
+                                Lead cloud solutions architect for engagements in Azure and GCP, designing and
+                                implementing multi-region HA/DR solutions to meet customer needs and budget, while
+                                aligning with the customer’s schedules, compliance and operational needs. Engage with
+                                all levels of the organization to support the cloud journey, including but not limited
+                                to HR, Training, QA, Security, Server, Data teams, and development.
+                            <ul>
+                                <li>
+                                    <p>• Designed and implemented Azure WVD with Nerdio, FSLogix and Azure NetApp Files,
+                                        scaling the design to over 1000 cores.</p>
+                                </li>
+                                <li>
+                                    <p>•Designed and implemented an Azure AD B2C deployment for ten thousand users in
+                                        conjunction with ZScaler ZApp to protect a critical tier 1 application for the
+                                        customer.</p>
+                                </li>
+                                <li>
+                                    <p>•Designed and implemented multi-region hot-DR tier 1 application for customer
+                                        with Azure App Gateway, Azure ASE, Azure App Services, eight Azure SQL Managed
+                                        Instances, as well as 45 VMs in traditional IaaS.</p>
+                                </li>
+                                <li>
+                                    <p>•Expanded Azure subscription topology, governance and Azure Blueprints to over
+                                        100 Azure subscriptions and multiple levels of compliance.</p>
+                                </li>
+                                <li>
+                                    <p>•Onboarded GCP to organization, designing multi-customer tenancy and RBAC
+                                        implementation. </p>
+                                </li>
+                                <li>
+                                    <p>•Closely managed right-sizing, life-cycling and instance reservation in cloud
+                                        resources to save more than $100,000/yr across the organization.</p>
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="experience-contents">
+                        <div class="exp-left">
+                            <p class="exp-company-name">Oklahoma OMES ISD</p>
+                            <p class="exp-time-period">2015-2021</p>
+                        </div>
+                        <div class="exp-right">
+                            <p class="exp-position">Hosted Technology Services Manager</p>
+                            <p class="exp-desc">
+                                Manager and technical resource responsible for all aspects of hosted services offered by
+                                OMES, including hosted environment development, operational management, cost management
+                                and cost recovery. Lead the Hosted Technology Services team in 104 migrations to
+                                Office365 for 39,500 users, provided architecture and engineering guidance for Windows
+                                Server 2003 and 2008 migrations to Azure as well as critical support during COVID-19
+                                response for the state. Designed and continually updated Azure architecture for best
+                                practices and served as cloud solutions architect in most project engagements involving
+                                Azure or GCP. As cloud leader for the organization, served to engage other teams and
+                                help develop their cloud-native capabilities to align with the cloud goals of the
+                                organization. Wrote proformas for service offerings to provide per-part cost recovery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="experience-contents">
+                        <div class="exp-left">
+                            <p class="exp-company-name">TekSystems</p>
+                            <p class="exp-time-period">2014-2015</p>
+                        </div>
+                        <div class="exp-right">
+                            <p class="exp-position">Seagate - Unix Security Administrator</p>
+                            <p class="exp-desc">
+                                Duties included the the day-to-day activities of maintaining information assurance and
+                                OS hardening. Reviewing systems for compliance with company standards, review the
+                                results of security software tools and provide a written analysis of findings as well as
+                                their impact and exploitability on AIX, RHEL and Solaris. Leverage inherent knowledge of
+                                networks, operating systems, and applications to mitigate security vulnerabilities in
+                                the datacenter systems. Draft security-related recommendations for management and
+                                operations teams. Assessing the impact on the business caused by theft, destruction,
+                                alteration, or denial of access to information. Create scripts and tools to reduce
+                                manpower in auditing activities and provide actionable security reports.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="experience-contents">
+                        <div class="exp-left">
+                            <p class="exp-company-name">Oklahoma OMES ISD</p>
+                            <p class="exp-time-period">2013-2014</p>
+                        </div>
+                        <div class="exp-right">
+                            <p class="exp-position">Supervisor, Desktop and Server Support</p>
+                            <p class="exp-desc">
+                                Supervise a team of eight Desktop and Server Support personnel supporting VMWare
+                                ESXi/vSphere 5.x, Windows, Linux and Solaris servers and Windows 7 desktops for the
+                                Oklahoma Tax Commission. Duties also include general Linux and Solaris system
+                                administration, maintaining and implementing backups in CommVault, coordinating the
+                                implementation of compliance objectives, responding to compliance audits, budgeting for
+                                the Desktop and Support group, and designing new solutions for customer needs. Designed
+                                and coordinated the implementation of new Tag Agent infrastructure services and DR
+                                equipment, new cluster and application resources to include a 40TB EqualLogic SSD SAN
+                                implementation, DR for a Motor Vehicle replacement product, and the upgrade or
+                                replacement of several legacy Wintel solutions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="experience-contents">
+                        <div class="exp-left">
+                            <p class="exp-company-name">Oklahoma Tax Commission</p>
+                            <p class="exp-time-period">2006-2013</p>
+                        </div>
+                        <div class="exp-right">
+                            <p class="exp-position">Computer Systems Specialist II/III</p>
+                            <p class="exp-desc">
+                                Duties included maintenance, installation and support of software and hardware on Intel
+                                and SPARC systems running Solaris 8-11 (including LDOMs and Zones), RHEL4-6 and CentOS
+                                EL derivatives. Utilized Puppet configuration management to streamline provisioning,
+                                policy-compliance, monitoring and backup configuration. Storage provisioned in SAN
+                                fabric as needed, utilizing Hitachi USP/VSP and EqualLogic tools. Audited and configured
+                                for IRS SCSEM compliance. Applications supported include Xen on RHEL5, Veritas Storage
+                                Foundation HA, Nagios, EMC/Legato Networker, Apache 2.x, Tomcat 5, PHP 5.x, Sendmail,
+                                Squid proxy servers, Sun Grid Engine, and the in-house backup of Oracle 11gR2 databases.
+                                Scripts in Awk, Ruby, Python, Perl, and PHP written as duties require. Completed a
+                                license audit with Oracle Corporation resulting in an approximately $500,000 year-one
+                                cost savings for the organization.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="education gap">
+                    <div class="right-title">Education</div>
+                    <div class="education-contents">
+                        <div class="education-left">
+                            <p class="education-school-name">SouthEastern Oklahoma State University</p>
+                            <p class="educationp-time-period">2002-2003</p>
+                        </div>
+                        <div class="education-right">
+                            <p class="education-subject">Management Information Systems</p>
+
+                        </div>
+                    </div>
+                    <div class="education-contents">
+                        <div class="education-left">
+                            <p class="education-school-name">Southern Oklahoma Technology Center</p>
+                            <p class="educationp-time-period">2000-2002</p>
+                        </div>
+                        <div class="education-right">
+                            <p class="education-subject">IT Class</p>
+                            <p class="education-desc">
+                                Completed Cisco Networking Academy for CCNA, as well as Oracle SQL 9i, Entity
+                                Relationships and Data Modeling.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="awards gap">
+                    <div class="right-title">Certifications</div>
+                    <div class="awards-contents">
+                        <div class="awards-left">
+                            <p class="awards-company-name">Microsoft</p>
+                            <p class="awards-time-period">9 June 2022 </p>
+                        </div>
+                        <div class="awards-right">
+                            <p class="awards-name"><a
+                                    href="https://www.credly.com/badges/10ad8755-ead4-46fe-9f7f-3219c5421b76/public_url">Microsoft
+                                    Certified: Azure Solutions Architect Expert</a></p>
+                            <p class="awards-desc">
+                                Expires on June 9, 2023 at 6:59 PM (UTC +05:00)</br>
+                                Certification number I302-9826
+                            </p>
+                        </div>
+                    </div>
+                    <div class="awards-contents">
+                        <div class="awards-left">
+                            <p class="awards-company-name">Microsoft</p>
+                            <p class="awards-time-period">26 May 2022</p>
+                        </div>
+                        <div class="awards-right">
+                            <p class="awards-name"><a
+                                    href="https://www.credly.com/badges/ed89aecd-9b98-48a3-b8d6-7f7017312240/public_url">Microsoft
+                                    Certified: Azure Administrator Associate</a></p>
+                            <p class="awards-desc">
+                                Expires on May 26, 2023 at 6:59 PM (UTC +05:00)</br>
+                                Certification number I283-2322
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="awards gap">
+                    <div class="right-title">Publications, Media, Other Contributions</div>
+                    <div class="awards-contents">
+                        <div class="awards-left">
+                            <p class="awards-company-name">Open Source and Other Public Security Work</p>
+                        </div>
+                        <div class="awards-right">
+                            <p class="awards-name">MITRE</p>
+                            <p class="awards-desc">
+                                Discovered and filed the vulnerabilities <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8716">CVE-2014-8716</a>,
+                                <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2753">CVE-2015-2753</a>,
+                                <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2754">CVE-2015-2754</a>,
+                                <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2776">CVE-2015-2776</a>,
+                                <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0667">CVE-2015-0667</a>,
+                                <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8900">CVE-2015-8900</a>,
+                                <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8901">CVE-2015-8901</a>,
+                                <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8902">CVE-2015-8902</a>,
+                                and <a
+                                    href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8903">CVE-2015-8903</a>.
+                            </p>
+                        </div>
+                        <div class="awards-right">
+                            <p class="awards-name">F/LOSS Community</p>
+                            <p class="awards-desc">Contributed to the open-source community through software fuzzing and
+                                code review, enrolling projects in Coverity static analysis, as well as finding
+                                vulnerabilities and non-security issues.</p>
+                        </div>
+                        <div class="awards-right">
+                            <p class="awards-name">Software</p>
+                            <p class="awards-desc">Created <a
+                                    href="https://github.com/jodiecunningham/EweNetTests">EweNetTests</a>, open-source
+                                toolbox of Robot Framework tests to support test-driven firewall changes.</p>
+                        </div>
+                    </div>
+                    <div class="awards-contents">
+                        <div class="awards-left">
+                            <p class="awards-company-name">Media Mentions</p>
+                        </div>
+                        <div class="awards-right">
+                            <p class="awards-name">Michał Zalewski, Director, Information Security Engineering &
+                                Assurance, Google Inc.</p>
+                            <p class="awards-desc">
+                                <a
+                                    href="https://lcamtuf.blogspot.com/2015/01/looking-back-at-three-months-of-afl-fuzz.html">"Looking
+                                    Back at Three Months of afl-fuzz" lcamtuf.blogspot.com</a>
+                            </p>
+                            <p class="awards-desc">
+                                <a
+                                    href="https://lcamtuf.blogspot.com/2016/05/clearing-up-some-misconceptions-around.html">"Clearing
+                                    up some misconceptions around the "ImageTragick" bug" lcamtuf.blogspot.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

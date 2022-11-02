@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "cosmosConnectionString": {
+            "type":"string"
+        },
+        "appinsightsInstrumentationKey": {
+            "type":"string"
+        },
+        "appinsightsConnectionString": {
+            "type": "string"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Web/staticSites/config",
+            "apiVersion": "2022-03-01",
+            "name": "jodiesiteswa/appsettings",
+            "kind": "string",
+            "properties": {
+                "COSMOS_CONNECTION_STRING": "[parameters('cosmosConnectionString')]",
+                "APPINSIGHTS_INSTRUMENTATIONKEY": "[parameters('appinsightsInstrumentationKey')]",
+                "APPLICATIONINSIGHTS_CONNECTION_STRING": "[parameters('appinsightsConnectionString')]"
+            }
+        }
+
+    ]
+}

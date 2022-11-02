@@ -102,7 +102,7 @@ resource "azurerm_dns_txt_record" "txtapex" {
   resource_group_name = azurerm_resource_group.mainrg.name
   ttl                 = 300
   record {
-    value = var.azurerm_jodiesitecustomdomaintxttoken
+    value = azurerm_static_site_custom_domain.jodiesitecustomdomain.validation_token
   }
 }
 

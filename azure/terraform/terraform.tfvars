@@ -6,4 +6,3 @@ azurerm_jodiesitecounterstorageaccountname = "sajodiesitecounterfunctioncb9ed28a
 azurerm_jodiesitecounterfunctionname       = "func-jodiesitecounter-ce337042"
 azurerm_jodiesitecosmosdbname              = "cosmos-jodiesitecounter-97e3ca8d"
 azurerm_jodiesitecosmostablename           = "visitors"
-azurerm_jodiesitecustomdomaintxttoken      = "8fj7m3vc5bnltmb1b58gypvmgdtx380b"

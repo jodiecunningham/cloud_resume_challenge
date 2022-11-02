@@ -29,7 +29,3 @@ variable "azurerm_jodiesitecosmosdbname" {
 variable "azurerm_jodiesitecosmostablename" {
   type = string
 }
-
-variable "azurerm_jodiesitecustomdomaintxttoken" {
-  type = string
-}

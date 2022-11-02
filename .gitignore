@@ -33,3 +33,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 azure/terraform/terraform.tfstate
+azure/terraform/terraform.tfvars

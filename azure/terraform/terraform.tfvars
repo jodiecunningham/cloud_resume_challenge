@@ -1,8 +1,5 @@
 azurerm_mainrg                             = "rg-jodiesite-scus"
 azurerm_mainlocation                       = "southcentralus"
 azurerm_jodiesitename                      = "jodiesiteswa"
-azurerm_jodiesitecounterappspname          = "appsp-jodiesitecounter-5fc1a142"
-azurerm_jodiesitecounterstorageaccountname = "sajodiesitecounterfunctioncb9ed28a"
-azurerm_jodiesitecounterfunctionname       = "func-jodiesitecounter-ce337042"
 azurerm_jodiesitecosmosdbname              = "cosmos-jodiesitecounter-97e3ca8d"
 azurerm_jodiesitecosmostablename           = "visitors"

@@ -1,4 +1,11 @@
 terraform {
+  cloud { 
+    organization = "jodiecunningham"
+
+    workspaces {
+      name = "cloud_resume_challenge"
+    }
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"

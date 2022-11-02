@@ -1,5 +1,5 @@
 terraform {
-  cloud { 
+  cloud {
     organization = "jodiecunningham"
 
     workspaces {
@@ -77,10 +77,10 @@ resource "azurerm_template_deployment" "jodiesiteconnstr" {
 }
 
 resource "azurerm_application_insights" "jodiesiteappinsights" {
-  name = azurerm_static_site.jodiesiteswa.name
-  location = azurerm_static_site.jodiesiteswa.location
+  name                = azurerm_static_site.jodiesiteswa.name
+  location            = azurerm_static_site.jodiesiteswa.location
   resource_group_name = azurerm_resource_group.mainrg.name
-  application_type = "web"
+  application_type    = "web"
 }
 
 
